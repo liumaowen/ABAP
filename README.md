@@ -287,7 +287,7 @@ SAP_LANGUAGE=EN
 
 1. **仔细阅读 CLAUDE.md** — 了解 Claude 在此项目中的工作规则
 2. **理解 INCLUDE 处理规则** — 必须完整展开包含树后再分析
-3. **遵循变更流程** — 先方案、再确认��再修改、再测试
+3. **遵循变更流程** — 先方案、再确认、再修改、再测试
 4. **配置 SAP 连接** — 填入真实的 `.env` 和 `.mcp.json` 信息
 5. **启用 MCP 服务** — 在 Claude Code 中正确配置 MCP 服务器
 6. **Track Transport Requests** — 所有变更必须绑定请求号
