@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Mcp"
+    ],
+    "deny": [
+      "Delete",
+      "Network",
+      "Dangerous_shell"
+    ]
+  },
+  "behavior": {
+    "always_plan_first": true,
+    "ask_before_high_risk_changes": true,
+    "prefer_minimal_changes": true,
+    "require_validation_after_change": true
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "sap-abap@sap-skills": true,
+    "context7@claude-plugins-official": true
+  }
+}

@@ -1,0 +1,65 @@
+{
+    "personal_preferences": {
+    "response_language": "zh-CN",
+    "prefer_concise_answers": true,
+    "prefer_abap_best_practices": true,
+    "prefer_clean_core": true
+  },
+  "local_overrides": {
+    "show_plan_before_execution": true,
+    "use_project_scope_file": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343749.html\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343749_1.html\" -o /tmp/ch188.html)",
+      "Read(//tmp/**)",
+      "Bash(grep -v \"^$\")",
+      "Bash(grep -v \"^[[:space:]]*$\")",
+      "Bash(grep -E \".{15,}\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343751.html\" -o /tmp/ch188_p2.html)",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343747.html\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343747.html\" -o /tmp/ch187_p1.html)",
+      "Bash(grep -E \".{10,}\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343749_1.html\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343751.html\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343751.html\" -o /tmp/188_p1.html)",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343751_1.html\" -o /tmp/188_p2.html)",
+      "Bash(ls -la /tmp/188_*.html)",
+      "mcp__vsp-dev__WriteSource",
+      "mcp__vsp-dev__EditSource",
+      "mcp__vsp-dev__GetSource",
+      "mcp__vsp-dev__GetTable",
+      "mcp__exa__web_fetch_exa",
+      "mcp__exa__web_search_exa",
+      "mcp__vsp-dev__SearchObject",
+      "mcp__vsp-dev__GetClassInfo",
+      "mcp__vsp-dev__GetInactiveObjects",
+      "Bash(curl -s 'http://192.168.13.12:8001/sap/bc/adt/ddic/tables/zlmw_tpl/source/main' -H 'Accept: application/vnd.sap.as+xml; charset=utf-8; dataversion=2.0' --user 'LIUMAOWEN:YourPassword')",
+      "mcp__vsp-dev__Activate",
+      "Bash(curl -s 'http://192.168.13.12:8001/sap/bc/adt/ddic/tables/zlmw_tpl' -H 'Accept: application/xml' -H 'Cookie: sap-usercontext=sap-client=151;SAP_SESSIONID_S4D_151=mock')",
+      "mcp__vsp-dev__CreateTable",
+      "mcp__vsp-dev__RunQuery",
+      "mcp__vsp-dev__RunReport",
+      "mcp__vsp-dev__RunReportAsync",
+      "mcp__vsp-dev__GetAsyncResult",
+      "Bash(curl -s --user LIUMAOWEN:1qaz@WSX -b \"sap-usercontext=sap-client=151\" \"http://192.168.13.12:8001/sap/bc/adt/discovery\" -H \"Accept: application/xml\")",
+      "mcp__vsp-dev__CallRFC",
+      "mcp__vsp-dev__GetFeatures",
+      "mcp__vsp-dev__InstallZADTVSP",
+      "mcp__vsp-dev__SyntaxCheck",
+      "mcp__vsp-dev__GetSystemInfo",
+      "mcp__vsp-dev__ActivatePackage",
+      "mcp__vsp-dev__LockObject",
+      "mcp__fetch__fetch"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "vsp-dev"
+  ],
+  "enabledPlugins": {
+    "context7@claude-plugins-official": false
+  }
+}

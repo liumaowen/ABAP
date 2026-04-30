@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "vsp-dev": {
+      "command": "./vsp.exe",
+      "env": {
+        "SAP_URL": "http://192.168.13.12:8001",
+        "SAP_USER": "LIUMAOWEN",
+        "SAP_PASSWORD": "LMW123456789",
+        "SAP_CLIENT": "151",
+        "SAP_LANGUAGE": "ZH",
+        "SAP_ALLOW_TRANSPORTABLE_EDITS": "true",
+        "SAP_ALLOWED_TRANSPORTS": "DEVK*,S4D*",
+        "SAP_ALLOWED_PACKAGES": "ZPROD,$TMP,$*,Z*"
+      }
+    }
+  }
+}

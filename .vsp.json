@@ -1,0 +1,12 @@
+{
+  "default": "dev",
+  "systems": {
+    "dev": {
+      "url": "http://192.168.13.12:8001",
+      "user": "LIUMAOWEN",
+      "password": "LMW123456789",
+      "client": "151",
+      "language": "ZH"
+    }
+  }
+}
