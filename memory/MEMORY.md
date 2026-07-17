@@ -34,6 +34,5 @@
 - [SAP连接配置](reference_sap_connection.md) — SAP 连接配置（请改成你自己的）
 - [激活函数模块](reference_activate_function_module.md) — 激活对象通用规则
 - [MCP ABAP工具完整列表](reference_mcp_abap_tools_complete.md) — MCP 工具完整清单
-- [MCP选择规则](reference_mcp_selection_rules.md) — 三MCP（vsp-dev/mcp-abap/adt-mcp）选择偏好：重叠默认vsp-dev，独家按场景分流
 - [CL_SALV_BS_RUNTIME_INFO](reference_cl_salv_runtime_info.md) — 拦截 SUBMIT 报表 ALV 数据
 - [WBS外码转内码](reference_conversion_exit_abpsp_input.md) — CONVERSION_EXIT_ABPSP_INPUT 用法
