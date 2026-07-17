@@ -12,6 +12,26 @@
         "SAP_ALLOWED_TRANSPORTS": "DEVK*,S4D*",
         "SAP_ALLOWED_PACKAGES": "ZPROD,$TMP,$*,Z*"
       }
+    },
+    "mcp-abap": {
+      "command": "node",
+      "args": ["E:\\wiskind\\abap-dev-bundle\\mcp-abap-adt-api\\dist\\index.js"],
+      "cwd": "E:\\wiskind\\abap-dev-bundle\\mcp-abap-adt-api",
+      "env": {
+        "SAP_URL": "http://192.168.13.12:8001",
+        "SAP_USER": "LIUMAOWEN",
+        "SAP_PASSWORD": "LMW123456789",
+        "SAP_CLIENT": "151",
+        "SAP_LANGUAGE": "ZH",
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0"
+      }
+    },
+    "adt-mcp": {
+      "type": "http",
+      "url": "http://localhost:2234/mcp",
+      "headers": {
+        "Authorization": "Bearer vD-9c0GLIdixCfcpxxQ_2_Ua-OqCNF69Gzmo9n7tDtI"
+      }
     }
   }
 }

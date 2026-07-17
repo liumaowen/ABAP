@@ -43,8 +43,44 @@
 
 - **数据源**: 通过 ADT（ABAP Development Tools）协议访问的 SAP 系统
 - **本地职责**: 配置、规则和 MCP 连接管理
-- **MCP 服务器**: `vsp-dev` — 提供 80+ ABAP 工具（搜索、读取、写入、激活、调试、测试、追踪）
+- **MCP 服务器**: 三个并行开启（详见下方" MCP 选择规则"）
+  - `vsp-dev` — 全能开发工具（80+ 工具：搜索、读写、激活、调试、分析、部署）
+  - `mcp-abap` — ADT 底层能力（重构、DDIC 属性、Transport 管理、服务绑定发布）
+  - `adt-mcp` — RAP 生命周期加速（生成器、ATC AI Fix、OData 服务查询）
 - **开发模式**: `focused`（仅启用核心工具）
+
+## MCP 选择规则
+
+三个 MCP 都保持开启，按以下规则选择工具调用：
+
+### 默认偏好
+- 重叠功能（读/写/激活/语法检查/搜索/SQL/测试/锁/传输查询）：**优先 vsp-dev**（最快最稳）
+- 独家功能：必须用有该能力的 MCP
+
+### 强制使用 adt-mcp
+- RAP 生成器建对象（表+CDS+BDEF+SRV+Fiori 一条龙：`abap_generators-*`）
+- ATC 检查 + AI 自动修复（`abap_atc_apply_ai_fix`、`execute_deterministic_quickfixes`）
+- OData 服务信息查询（为 Fiori 生成做准备：`abap_business_services-*`）
+
+### 强制使用 mcp-abap
+- 代码重构：提取方法（`extractMethod*`）、重命名（`rename*`）
+- 快速修复建议（`fixProposals/fixEdits`）
+- DDIC 属性设置（`setDataElementProperties/setDomainProperties`）
+- Transport 生命周期：创建/释放/配置（`createTransport/transportRelease/setTransportsConfig`）
+- 服务绑定发布（`publishServiceBinding/unPublishServiceBinding`）
+- 创建测试 Include（`createTestInclude`）
+- 注解定义查询（`annotationDefinitions`）
+
+### 强制使用 vsp-dev
+- 调试（`Debugger*`、`AMDPDebugger*`、ZADT_VSP WebSocket 运行时调试）
+- 代码分析（调用图、覆盖率、CDS 依赖、包边界、代码质量、上下文压缩）
+- 搜索（`GrepObjects/GrepPackages` 跨对象/跨包搜索）
+- 运行时工具（Dump、Trace、SQL Trace、RFC 调用、报表执行）
+- abapGit 操作（导出/安装/DeployZip）
+- Fiori/UI5 应用查看
+- 版本历史与对比（`GetRevisions/CompareVersions/CompareSource`）
+- 对象克隆/移动
+- 直接建表/建包（`CreateTable/CreatePackage`）
 
 ## 关键文件
 

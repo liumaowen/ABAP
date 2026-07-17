@@ -1,14 +1,4 @@
 {
-    "personal_preferences": {
-    "response_language": "zh-CN",
-    "prefer_concise_answers": true,
-    "prefer_abap_best_practices": true,
-    "prefer_clean_core": true
-  },
-  "local_overrides": {
-    "show_plan_before_execution": true,
-    "use_project_scope_file": true
-  },
   "permissions": {
     "allow": [
       "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.neixiongxs.com/114_114067/42343749.html\")",
@@ -52,7 +42,11 @@
       "mcp__vsp-dev__GetSystemInfo",
       "mcp__vsp-dev__ActivatePackage",
       "mcp__vsp-dev__LockObject",
-      "mcp__fetch__fetch"
+      "mcp__fetch__fetch",
+      "Bash(python *)",
+      "mcp__vsp-dev__UnlockObject",
+      "mcp__vsp-dev__ImportFromFile",
+      "mcp__vsp-dev__GetObjectStructure"
     ]
   },
   "enableAllProjectMcpServers": true,
@@ -61,5 +55,15 @@
   ],
   "enabledPlugins": {
     "context7@claude-plugins-official": false
+  },
+  "personal_preferences": {
+    "response_language": "zh-CN",
+    "prefer_concise_answers": true,
+    "prefer_abap_best_practices": true,
+    "prefer_clean_core": true
+  },
+  "local_overrides": {
+    "show_plan_before_execution": true,
+    "use_project_scope_file": true
   }
 }
