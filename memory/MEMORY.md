@@ -29,6 +29,7 @@
 - [FAE字段长度必须一致](feedback_for_all_entries_type_length_match.md) — FOR ALL ENTRIES 两边字段类型长度必须严格一致
 - [ZFMDATASAVE放顶部](feedback_zfmdatasave_top_position.md) — RFC 函数日志宏必须放在函数体最顶部
 - [CALL FUNCTION不支持内联声明](feedback_call_function_no_inline_decl.md) — CALL FUNCTION 参数位置禁止内联声明
+- [vsp-dev LockObject 404 fallback](feedback_vsp_lockobject_404_fallback.md) — vsp-dev 锁失败时回退到 mcp-abap 写代码
 
 ## Reference (参考资料)
 - [SAP连接配置](reference_sap_connection.md) — SAP 连接配置（请改成你自己的）

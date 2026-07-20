@@ -54,9 +54,11 @@
 
 ### 默认偏好
 - 重叠功能（读/写/激活/语法检查/搜索/SQL/测试/锁/传输查询）：**优先 vsp-dev**（最快最稳）
+- **Fallback 策略**：如果 vsp-dev 的 `LockObject` 返回 404 或 `EditSource`/`WriteSource` 失败，**立即回退到 mcp-abap**
 - 独家功能：必须用有该能力的 MCP
 
 ### 强制使用 mcp-abap
+- **代码写入（vsp-dev 失败时的 fallback）**：`lock` + `setObjectSource` + `unLock`
 - 代码重构：提取方法（`extractMethod*`）、重命名（`rename*`）
 - 快速修复建议（`fixProposals/fixEdits`）
 - DDIC 属性设置（`setDataElementProperties/setDomainProperties`）
@@ -113,7 +115,9 @@
 
 1. **搜索对象**: `SearchObject` + 查询条件（如 `ZCL_*`、`ZLMW_*`）
 2. **读取源码**: `GetSource` — 指定 `object_type`（PROG/CLAS/INTF/FUNC/DDLS/BDEF/SRVD）+ `name`
-3. **编辑源码**: `EditSource` 用于精确字符串替换，`WriteSource` 用于完整写入
+3. **编辑源码**:
+   - **优先 vsp-dev**：`EditSource` 用于精确字符串替换，`WriteSource` 用于完整写入
+   - **Fallback 到 mcp-abap**：如果 vsp-dev 失败，使用 `lock` → `setObjectSource(filePath + objectSourceUrl + lockHandle + transport)` → `unLock`
 4. **语法检查**: `SyntaxCheck` — 保存前检查语法
 5. **激活**: `Activate` 激活单个对象，`ActivatePackage` 批量激活
 6. **运行测试**: `RunUnitTests` 执行 ABAP Unit，`GetCodeCoverage` 分析覆盖率

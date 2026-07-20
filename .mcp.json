@@ -25,6 +25,13 @@
         "SAP_LANGUAGE": "ZH",
         "NODE_TLS_REJECT_UNAUTHORIZED": "0"
       }
+    },
+    "adt-mcp": {
+      "type": "http",
+      "url": "http://localhost:2236/mcp",
+      "headers": {
+        "Authorization": "Bearer R8w_hiD12loP1XIsJjFI5A"
+      }
     }
   }
 }
